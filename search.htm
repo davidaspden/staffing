@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Station Search</title>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<style>
+    #quickSearch{
+        width: 100%;
+    }
+    #surnames {
+        width: 100%;
+    }
+    #suggestions {
+        width: 90%;
+        position: relative;
+        border: 1px solid #eee;
+    }
+</style>
+</head>
+<body>
+    <div id="quickSearch">
+    <input type="textbox" id="surnames"/>
+    <div id="suggestions"></div>
+</div>
+<script src="parseCSV.js"></script>
+<script type="javascript">
+    names = parseCSV('data.csv')
+    $('#surnames').change(function(){
+        console.log('change')
+    })
+</script>
+</body>
+</html>
